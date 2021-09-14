@@ -1,4 +1,11 @@
-import { Add, DirectionsBoat, Home, Menu, Rowing } from "@material-ui/icons";
+import {
+	Add,
+	Close,
+	DirectionsBoat,
+	Home,
+	Menu,
+	Rowing,
+} from "@material-ui/icons";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -17,25 +24,29 @@ export default function Sidebar() {
 			<div
 				className={
 					open
-						? "bg-gray-100 w-40 heightCalc flex flex-col px-5 items-start justify-start transition-all duration-200 sticky left-0 top-14 xl:px-5 xl:w-40 xl:items-start z-40 shadow-lg select-none"
-						: "bg-gray-100 w-10 heightCalc flex flex-col items-center justify-start sticky top-14 left-0 transition-all duration-200 xl:items-start xl:w-40 xl:px-5 z-40 shadow-md select-none"
+						? "bg-gray-100 w-44 heightCalc flex flex-col px-5 items-start justify-start transition-all duration-200 sticky left-0 top-14 xl:px-5 xl:w-44 xl:items-center z-40 shadow-lg select-none"
+						: "bg-gray-100 w-10 heightCalc flex flex-col items-center justify-start sticky top-14 left-0 transition-all duration-200 xl:items-center xl:w-44 xl:px-5 z-40 shadow-md select-none flex-[1]"
 				}>
-				<Menu
-					className={
-						open
-							? "mt-4 mb-6 xl:opacity-0 xl:mt-0 ml-auto transition-all duration-300 cursor-pointer"
-							: "mt-4 mb-6 xl:opacity-0 xl:mt-0 transition-all duration-300 cursor-pointer"
-					}
-					onClick={toggleMenu}
-				/>
-				<span
-					className={
-						open
-							? "xl:inline font-semibold text-xl transition-all duration-300"
-							: "hidden xl:inline font-semibold text-xl transition-all duration-300"
-					}>
-					Menu
-				</span>
+				{!open ? (
+					<Menu
+						className={
+							open
+								? "mt-4 mb-6 xl:opacity-0 xl:mt-0 ml-auto transition-all duration-300 cursor-pointer"
+								: "mt-4 mb-6 xl:opacity-0 xl:mt-0 transition-all duration-300 cursor-pointer"
+						}
+						onClick={toggleMenu}
+					/>
+				) : (
+					<Close
+						className={
+							open
+								? "mt-4 mb-6 xl:opacity-0 xl:mt-0 ml-auto transition-all duration-300 cursor-pointer"
+								: "mt-4 mb-6 xl:opacity-0 xl:mt-0 transition-all duration-300 cursor-pointer"
+						}
+						onClick={toggleMenu}
+					/>
+				)}
+
 				<Link to='/'>
 					<div
 						className={
