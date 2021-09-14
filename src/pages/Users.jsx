@@ -9,7 +9,11 @@ function Users() {
 			createdAt: "23/04/99",
 		},
 	];
-	return <UserChart info={data} />;
+	return (
+		<div className='widthCalc'>
+			<UserChart info={data} />
+		</div>
+	);
 }
 
 export default Users;

@@ -19,7 +19,11 @@ function Boats() {
 			location: "Long Beach",
 		},
 	];
-	return <BoatChart info={boats} />;
+	return (
+		<div className='widthCalc'>
+			<BoatChart info={boats} />
+		</div>
+	);
 }
 
 export default Boats;

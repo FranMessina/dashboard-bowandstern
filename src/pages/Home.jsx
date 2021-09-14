@@ -18,7 +18,7 @@ function Home() {
 
 	const locations = ["Miami", "Long Beach", "Caribe", "Mediterranean"];
 	return (
-		<div className='w-full grid max-w-7xl grid-cols-1 mx-auto gap-3 md:grid-cols-3 items-start flex-grow p-8'>
+		<div className='widthCalc grid max-w-7xl grid-cols-1 mx-auto gap-3 md:grid-cols-3 items-start flex-grow p-8 relative right-0'>
 			<StatCard title='Boats' stat={40} icon='boat' />
 			<StatCard title='Locations' stat={35} icon='location' />
 			<StatCard title='Users' stat={60} icon='user' />
