@@ -38,11 +38,11 @@ function BoatChart({ info }) {
 									</td>
 									<td className='px-4 py-3 border'>
 										<span className='px-2 py-1 font-semibold text-md'>
-											{a.location}
+											{a.locations_id}
 										</span>
 									</td>
 									<td className='px-4 py-3 text-sm border italic font-semibold'>
-										$ {a.price}
+										{a.year}
 									</td>
 									<td className='w-44 py-3 text-sm border '>
 										<div className='mx-auto flex justify-start gap-5'>

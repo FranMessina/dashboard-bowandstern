@@ -20,7 +20,7 @@ export default function Sidebar() {
 			<div
 				className={
 					open
-						? "bg-gray-100 w-44 heightCalc flex flex-col px-5 items-start justify-start transition-all duration-200 fixed left-0 top-14  z-40 shadow-lg select-none"
+						? "bg-gray-100 w-44 heightCalc flex flex-col px-5 items-center justify-start transition-all duration-200 fixed left-0 top-14  z-40 shadow-lg select-none"
 						: "bg-gray-100 w-10 heightCalc flex flex-col items-center justify-start fixed top-14 left-0 transition-all duration-200  z-40 shadow-md select-none "
 				}>
 				{!open ? (
@@ -48,7 +48,7 @@ export default function Sidebar() {
 						className={
 							open
 								? "group flex items-center justify-between mt-4 rounded-xl px-3 py-1 hover:bg-gray-300 cursor-pointer"
-								: "group flex items-center justify-between mt-4 rounded-xl px-3 py-1 hover:bg-gray-300 cursor-pointer"
+								: "group flex items-center justify-between mt-4 rounded-xl px-3 py-1 cursor-pointer"
 						}>
 						<Home
 							className={

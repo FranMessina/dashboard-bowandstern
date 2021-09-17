@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import UserChart from "../components/UserChart";
 
 function Users() {
-	const data = [
-		{
-			name: "Francisco Messina",
-			email: "fm230499@gmail.com",
-			createdAt: "23/04/99",
-		},
-	];
+	const [users, setUsers] = useState([]);
+
+	useEffect(() => {
+		async function getUsers() {
+			const response = await fetch("http://localhost:3000/api/user")
+				.then(res => res.json())
+				.catch(err => console.log(err));
+			setUsers(response.data.users);
+
+			return response;
+		}
+		getUsers();
+	}, []);
 	return (
 		<div className='widthCalc'>
-			<UserChart info={data} />
+			<UserChart info={users} />
 		</div>
 	);
 }
