@@ -11,7 +11,7 @@ function BoatChart({ info }) {
 								<th className='px-4 py-3'>Name</th>
 								<th className='px-4 py-3'>Location</th>
 								<th className='px-4 py-3'>Date</th>
-								<th className='px-4 py-3'>ACTIONS</th>
+								{/* <th className='px-4 py-3'>ACTIONS</th> */}
 							</tr>
 						</thead>
 						<tbody className='bg-white'>
@@ -38,13 +38,13 @@ function BoatChart({ info }) {
 									</td>
 									<td className='px-4 py-3 border'>
 										<span className='px-2 py-1 font-semibold text-md'>
-											{a.locations_id}
+											{a.location.location}
 										</span>
 									</td>
 									<td className='px-4 py-3 text-sm border italic font-semibold'>
 										{a.year}
 									</td>
-									<td className='w-44 py-3 text-sm border '>
+									{/* <td className='w-44 py-3 text-sm border '>
 										<div className='mx-auto flex justify-start gap-5'>
 											<button className='bg-yellow-200 px-3 py-1 rounded-sm bg-opacity-50 text-yellow-500 ml-4'>
 												EDIT
@@ -53,7 +53,7 @@ function BoatChart({ info }) {
 												DELETE
 											</button>
 										</div>
-									</td>
+									</td> */}
 								</tr>
 							))}
 						</tbody>
