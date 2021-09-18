@@ -100,7 +100,7 @@ export default function Sidebar() {
 						</span>
 					</div>
 				</Link>
-				<Link to='/new-product'>
+				{/* <Link to='/new-product'>
 					<div
 						className={
 							open
@@ -118,7 +118,7 @@ export default function Sidebar() {
 							Create
 						</span>
 					</div>
-				</Link>
+				</Link> */}
 			</div>
 			{open && (
 				<div className='bg-gray-700 bg-opacity-20 w-screen heightCalc z-20 absolute top-14'></div>
